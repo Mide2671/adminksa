@@ -67,7 +67,7 @@ const EditSeries = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("...", formData.image);
+
     // Create a new FormData instance
     const data = new FormData();
     data.append("title", formData.title);
@@ -90,7 +90,7 @@ const EditSeries = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:4000/admin/series/${id}`,
+        `https://ksa-api-ln1y.onrender.com/admin/series/${id}`,
         data,
         {
           headers: {

@@ -16,6 +16,7 @@ const EditSeries = () => {
     category: "",
     director: "",
     writer: "",
+    loc: "",
     season: 0,
     episode: 0,
     averageRating: 0,
@@ -46,6 +47,7 @@ const EditSeries = () => {
           season: response.data.season,
           episode: response.data.episode,
           averageRating: response.data.averageRating,
+          loc: response.data.loc,
         });
       } catch (err) {
         console.error("Error fetching series data:", err);
@@ -84,6 +86,7 @@ const EditSeries = () => {
     data.append("url", formData.url);
     data.append("category", formData.category);
     data.append("averageRating", formData.averageRating);
+    data.append("loc", formData.loc);
 
     try {
       const response = await axios.put(
@@ -189,6 +192,18 @@ const EditSeries = () => {
             onChange={handleChange}
             className="mt-1 block w-full p-2 border rounded-md"
             placeholder="Enter series URL"
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-gray-700">Loc</label>
+          <input
+            type="text"
+            name="loc"
+            value={formData.loc}
+            onChange={handleChange}
+            className="mt-1 block w-full p-2 border rounded-md"
+            placeholder="Enter series Loc"
             required
           />
         </div>

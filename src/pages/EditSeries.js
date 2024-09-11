@@ -13,7 +13,7 @@ const EditSeries = () => {
     description: "",
     image: null,
     url: "",
-    category: "",
+
     director: "",
     writer: "",
     loc: "",
@@ -41,7 +41,7 @@ const EditSeries = () => {
           description: response.data.description,
           image: response.data.image,
           url: response.data.url,
-          category: response.data.category,
+       
           director: response.data.director,
           writer: response.data.writer,
           season: response.data.season,
@@ -84,7 +84,7 @@ const EditSeries = () => {
       data.append("image", formData.image); // Existing image name
     }
     data.append("url", formData.url);
-    data.append("category", formData.category);
+
     data.append("averageRating", formData.averageRating);
     data.append("loc", formData.loc);
 
@@ -206,23 +206,7 @@ const EditSeries = () => {
             required
           />
         </div>
-        <div>
-          <label className="block text-gray-700">Category</label>
-          <select
-            name="category"
-            value={formData.category}
-            onChange={handleChange}
-            className="mt-1 block w-full p-2 border rounded-md"
-            required
-          >
-            <option value="">Select category</option>
-            <option value="h">Highest Rated today</option>
-            <option value="">BuzzWorthy Now</option>
-            <option value="pc">Popular Celebrity</option>
-            <option value="hm">Hit Movies</option>
-            <option value="c">Coming Soon</option>
-          </select>
-        </div>
+     
         <div>
           <label className="block text-gray-700">Director</label>
           <input

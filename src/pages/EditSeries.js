@@ -132,22 +132,21 @@ const EditSeries = () => {
             className="mt-1 block w-full p-2 border rounded-md"
             required
           >
-            <option value="">Select Genre</option>
-            <option value="romance">ROMANCE</option>
-            <option value="fantasy">FANTASY</option>
-            <option value="horror">HORROR</option>
-            <option value="comedy">COMEDY</option>
-            <option value="web drama">WEB DRAMA</option>
-            <option value="mystery">MYSTERY</option>
-            <option value="costume">COSTUME</option>
-            <option value="action"> ACTION</option>
-            <option value="science fiction">SCIENCE FICTION</option>
-            <option value="thriller">THRILLER</option>
-            <option value="music">MUSIC</option>
-            <option value="crime">CRIME</option>
-            <option value="history">HISTORY</option>
-            <option value="family">FAMILY</option>
-            <option value="comedy">COMEDY</option>
+                <option value="">Select Genre</option>
+            <option value="Romance">ROMANCE</option>
+            <option value="Fantasy">FANTASY</option>
+            <option value="Horror">HORROR</option>
+            <option value="Comedy">COMEDY</option>
+            <option value="Web drama">WEB DRAMA</option>
+            <option value="Mystery">MYSTERY</option>
+            <option value="Costume">COSTUME</option>
+            <option value="Action"> ACTION</option>
+            <option value="Science fiction">SCIENCE FICTION</option>
+            <option value="Thriller">THRILLER</option>
+            <option value="Music">MUSIC</option>
+            <option value="Crime">CRIME</option>
+            <option value="History">HISTORY</option>
+            <option value="Family">FAMILY</option>
           </select>
         </div>
         <div>

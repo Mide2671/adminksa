@@ -15,6 +15,7 @@ const CreateSeries = () => {
     category: "",
     director: "",
     writer: "",
+    loc: "",
     season: 0,
     episode: 0,
     averageRating: 0,
@@ -44,6 +45,7 @@ const CreateSeries = () => {
     data.append("episode", formData.episode);
     data.append("director", formData.director);
     data.append("writer", formData.writer);
+    data.append("loc", formData.loc);
 
     try {
       const response = await axios.post(
@@ -152,6 +154,18 @@ const CreateSeries = () => {
             onChange={handleChange}
             className="mt-1 block w-full p-2 border rounded-md"
             placeholder="Enter series URL"
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-gray-700">Loc</label>
+          <input
+            type="text"
+            name="loc"
+            value={formData.loc}
+            onChange={handleChange}
+            className="mt-1 block w-full p-2 border rounded-md"
+            placeholder="Enter series Loc"
             required
           />
         </div>
